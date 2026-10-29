@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wind-procurement-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: CORS_ORIGINS
+        sync: false
